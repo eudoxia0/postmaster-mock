@@ -28,7 +28,7 @@
 (defclass <mock-service> (<service>)
   ((accounts :accessor accounts :type hash-table
              :initform (make-hash-table :test #'equal))
-   (emails :accessor emails :initarg :email :type (list-of <email>)
+   (emails :accessor emails :initarg :email :type (proper-list <email>)
            :initform (list)))
   (:documentation "A service that stores all incoming mail in a stack."))
 
